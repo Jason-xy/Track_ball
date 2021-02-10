@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>457.jpg</filename>
+	<path>/home/jason/jetson-inference/python/training/detection/ssd/data/Ball/JPEGImages/457.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Ball</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1123</xmin>
+			<ymin>532</ymin>
+			<xmax>1358</xmax>
+			<ymax>776</ymax>
+		</bndbox>
+	</object>
+</annotation>
