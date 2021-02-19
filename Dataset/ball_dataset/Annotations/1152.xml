@@ -1,0 +1,26 @@
+<annotation>
+	<folder>1</folder>
+	<filename>1152.jpg</filename>
+	<path>C:\Users\Jason\Desktop\CV\video\img\1\1152.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Ball</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1125</xmin>
+			<ymin>208</ymin>
+			<xmax>1351</xmax>
+			<ymax>437</ymax>
+		</bndbox>
+	</object>
+</annotation>
