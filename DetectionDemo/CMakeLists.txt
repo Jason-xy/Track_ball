@@ -1,18 +1,14 @@
+cmake_minimum_required(VERSION 2.8)
 
-file(GLOB detectnetSources *.cpp)
-file(GLOB detectnetIncludes *.h )
+project(detection)
 
-cuda_add_executable(detectnet ${detectnetSources})
-target_link_libraries(detectnet jetson-inference)
-install(TARGETS detectnet DESTINATION bin)
+find_package(jetson-utils)
+find_package(jetson-inference)
+find_package(CUDA)
+find_package(Qt4)
 
-# for legacy users of detectnet-camera (will be deprecated)
-cuda_add_executable(detectnet-camera ${detectnetSources})
-target_link_libraries(detectnet-camera jetson-inference)
-install(TARGETS detectnet-camera DESTINATION bin)
+include(${QT_USE_FILE})
+add_definitions(${QT_DEFINITIONS})
 
-# for legacy users of detectnet-console (will be deprecated)
-cuda_add_executable(detectnet-console ${detectnetSources})
-set_target_properties(detectnet-console PROPERTIES COMPILE_FLAGS "-DHEADLESS" )
-target_link_libraries(detectnet-console jetson-inference)
-install(TARGETS detectnet-console DESTINATION bin)
+cuda_add_executable(detection detection.cpp)
+target_link_libraries(detection jetson-inference)

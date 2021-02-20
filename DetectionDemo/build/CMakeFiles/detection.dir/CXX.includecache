@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jason/github/Track_ball/DetectionDemo/detection.cpp
+jetson-utils/videoSource.h
+/home/jason/github/Track_ball/DetectionDemo/jetson-utils/videoSource.h
+jetson-utils/videoOutput.h
+/home/jason/github/Track_ball/DetectionDemo/jetson-utils/videoOutput.h
+jetson-inference/detectNet.h
+/home/jason/github/Track_ball/DetectionDemo/jetson-inference/detectNet.h
+signal.h
+-
+

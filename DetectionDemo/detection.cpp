@@ -1,7 +1,7 @@
-#include "videoSource.h"
-#include "videoOutput.h"
+#include "jetson-utils/videoSource.h"
+#include "jetson-utils/videoOutput.h"
 
-#include "detectNet.h"
+#include "jetson-inference/detectNet.h"
 
 #include <signal.h>
 
