@@ -13,9 +13,17 @@ jetson-utils/videoOutput.h
 /home/jason/github/Track_ball/TrackBall/jetson-utils/videoOutput.h
 jetson-inference/detectNet.h
 /home/jason/github/Track_ball/TrackBall/jetson-inference/detectNet.h
+jetson-utils/cudaOverlay.h
+-
+jetson-utils/cudaMappedMemory.h
+-
+jetson-utils/imageIO.h
+-
 opencv2/opencv.hpp
 /home/jason/github/Track_ball/TrackBall/opencv2/opencv.hpp
 signal.h
+-
+typeinfo
 -
 
 /usr/local/include/opencv4/opencv2/./imgproc/segmentation.hpp
