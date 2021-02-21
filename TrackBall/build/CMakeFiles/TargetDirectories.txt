@@ -1,0 +1,3 @@
+/home/jason/github/Track_ball/TrackBall/build/CMakeFiles/rebuild_cache.dir
+/home/jason/github/Track_ball/TrackBall/build/CMakeFiles/trackball.dir
+/home/jason/github/Track_ball/TrackBall/build/CMakeFiles/edit_cache.dir
