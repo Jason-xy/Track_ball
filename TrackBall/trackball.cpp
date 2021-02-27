@@ -79,6 +79,7 @@ int main(int argc, char** argv){
 	Scalar Color = Scalar(225, 0, 0);
 	uchar4* CUDATopImg = NULL;
 	uchar4* imgOutput = NULL;
+	float R=0;
 	int2 dimsA = make_int2(input->GetWidth(),input->GetHeight());
 	int2 dimsOutput = make_int2(2*dimsA.x, dimsA.y);
 	cudaAllocMapped(&imgOutput, dimsOutput.x, dimsOutput.y);
@@ -111,11 +112,14 @@ int main(int argc, char** argv){
 			{
 				CurP.x = (detections[n].Left + detections[n].Right)/2;
 				CurP.y = (detections[n].Top + detections[n].Bottom)/2;
+				R = (detections[n].Right-detections[n].Left)/4  + (detections[n].Bottom - detections[n].Top)/4;
+
 				LogVerbose("detected obj %i  class #%u (%s)  confidence=%f\n", n, detections[n].ClassID, net->GetClassDesc(detections[n].ClassID), detections[n].Confidence);
 				LogVerbose("bounding box %i  (%f, %f)  (%f, %f)  w=%f  h=%f\n", n, detections[n].Left, detections[n].Top, detections[n].Right, detections[n].Bottom, detections[n].Width(), detections[n].Height()); 
 			}
-
+			LogVerbose("R = %f\n", R);
 			circle(TopImg, CurP, 10, Scalar(255,0,0,225),-1);
+			circle(TopImg, CurP, R, Scalar(255,0,0,225),3);
 			drawArrow(TopImg, CurP, (CurP-PreP)*3+CurP, 10, 30, Color, 3, 1);
 			PreP.x = CurP.x;
 			PreP.y = CurP.y;
